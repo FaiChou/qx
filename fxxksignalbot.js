@@ -1,13 +1,10 @@
-/**
- * @fileoverview Fxxk SignalBot
- *
- * @supported Quantumult X (v1.0.5-build188)
- *
- * [rewrite_local]
- * https://www.sweerui.love:1123/api/results url script-request-header fxxksignalbot.js
- */
+/*
+[mitm]
+hostname = www.sweerui.love
+[rewrite_local]
+https://www.sweerui.love:1123/api/results url script-request-header https://raw.githubusercontent.com/FaiChou/qx/refs/heads/main/fxxksignalbot.js
+*/
 
-// $request.scheme, $request.method, $request.url, $request.path, $request.headers
 function generateTimestampUUID() {
   const timestamp = Date.now();
   const randomPart = Math.floor(Math.random() * 1000000000).toString(16);
